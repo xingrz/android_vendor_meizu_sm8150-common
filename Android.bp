@@ -19,3 +19,35 @@
 soong_namespace {
 }
 
+android_app_import {
+	name: "QtiTelephonyService",
+	owner: "meizu",
+	apk: "proprietary/app/QtiTelephonyService/QtiTelephonyService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "ims",
+	owner: "meizu",
+	apk: "proprietary/priv-app/ims/ims.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "qcrilmsgtunnel",
+	owner: "meizu",
+	apk: "proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
